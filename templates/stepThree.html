@@ -1,0 +1,37 @@
+<div class="padding">
+	<img ng-src="{{ got.Poster }}" class="poster-got">
+	<div class="got-details">
+		<span class="got-title">{{ got.Title + ' (' + got.Year + ')' }}</span>
+		<br>
+		<br>
+		<span>Plot: {{ got.Plot }}</span>
+		<br>
+		<br>
+		<span>Got is a amazing TV Show. What is your favorite season?</span>
+		<br>
+		<br>
+		<md-radio-group ng-model="selectedSeason" layout="row" layout-wrap>
+			<md-radio-button ng-repeat="i in numberOfSeasons track by $index" ng-click="getSeasonDetails($index + 1)" value="{{ $index + 1 }}" class="md-primary">{{ $index + 1 }}</md-radio-button>
+		</md-radio-group>	
+	</div>
+	<br>
+	<table ng-show="episodes.length >= 1" class="md-api-table">
+		<thead>
+			<tr>
+				<th>Episode</th>
+				<th>Name</th>
+				<th>Released</th>
+				<th>Imdb Rating</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="episode in episodes">
+				<td>{{ episode.Episode }}</td>
+				<td>{{ episode.Title }}</td>
+				<td>{{ episode.Released }}</td>
+				<td>{{ episode.imdbRating }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

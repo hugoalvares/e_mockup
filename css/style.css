@@ -1,0 +1,122 @@
+.panel {
+	width: 80%;
+	margin-left: 10%;
+	margin-top: 30px;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #eeeeee;
+	background-color: #fafafa;
+}
+
+.button-align-right {
+	float: right;
+}
+
+.progressbar {
+	counter-reset: step;
+	margin: 0;
+	padding: 0;
+	padding: 5%;
+}
+
+.progressbar li {
+	list-style-type: none;
+	float: left;
+	width: 20%;
+	position: relative;
+}
+
+.progressbar li:before {
+	position: relative;
+	content: counter(step);
+	counter-increment: step;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid black;
+	display: block;
+	text-align: center;
+	margin: 0 auto 20px auto;
+	border-radius: 50%;
+	background-color: white;
+	z-index: 1;
+}
+
+.progressbar li:after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background-color: #eeeeee;
+	top: 15px;
+	left: -50%;
+	z-index: 0;
+}
+
+.progressbar li:first-child:after {
+	content: none;
+}
+
+.progressbar li.active {
+	color: black;
+}
+
+.progressbar li.active:before {
+	border-color: black;
+	background-color: black;
+	color: white;
+}
+
+.clear {
+	clear: both;
+}
+
+.padding {
+	padding: 5%;
+}
+
+.light-blue-color {
+	background-color: #2196f3 !important;
+}
+
+.poster {
+	width: 80px;
+	height: 110px;
+    margin-left: 25%;
+}
+
+.movie-div {
+	width: 25%;
+	margin-bottom: 30px;
+}
+
+@media (max-width:599px) {
+
+	.movie-div {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+
+}
+
+.poster-got {
+	width: 120px;
+	height: 150px;	
+    float: left;
+    margin-right: 5%;
+    margin-bottom: 30px;
+}
+
+.got-details {
+
+}
+
+.got-title {
+	font-weight: bold;
+}
+
+.md-api-table {
+	width: 100%;
+	border-spacing: 5px;
+	text-align: left;
+}

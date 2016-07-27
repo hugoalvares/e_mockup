@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Angular Material style sheet -->
+	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+
+	<!-- Angular Material requires Angular.js Libraries -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+
+	<!-- Angular Material Library -->
+	<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+	<!-- Styles -->
+	<link rel="stylesheet" href="css/style.css">
+
+    <!-- Modules -->
+    <script src="js/modules/app.js"></script>	
+
+	<!-- Controllers -->
+    <script src="js/controllers/QuizController.js"></script>	    
+
+    <!-- Directives -->
+    <script src="js/directives/stepOne.js"></script>
+    <script src="js/directives/stepTwo.js"></script>
+    <script src="js/directives/stepThree.js"></script>
+    <script src="js/directives/stepFour.js"></script>
+    <script src="js/directives/stepFive.js"></script>
+</head>
+<body ng-cloak>
+
+	<div ng-controller="QuizController" class="panel">
+		<ul class="progressbar">
+			<li ng-class="{active: currentStep >= 1}"></li>
+			<li ng-class="{active: currentStep >= 2}"></li>
+			<li ng-class="{active: currentStep >= 3}"></li>
+			<li ng-class="{active: currentStep >= 4}"></li>
+			<li ng-class="{active: currentStep >= 5}"></li>
+		</ul>
+		<div class="clear">
+			<md-divider></md-divider>
+			<directivestepone ng-show="currentStep == 1"></directivestepone>
+			<directivesteptwo ng-show="currentStep == 2"></directivesteptwo>
+			<directivestepthree ng-show="currentStep == 3"></directivestepthree>
+			<directivestepfour ng-show="currentStep == 4"></directivestepfour>
+			<directivestepfive ng-show="currentStep == 5"></directivestepfive>
+			<md-divider></md-divider>
+		</div>
+		<div class="padding">
+			<md-button class="light-blue-color md-raised md-primary" ng-click="back()">BACK</md-button>
+			<md-button class="light-blue-color md-raised md-primary button-align-right" ng-click="next()">NEXT</md-button>
+		</div>
+	</div>
+
+</body>
+</html>

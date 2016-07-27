@@ -1,0 +1,8 @@
+<div class="padding">
+	<md-radio-group ng-model="selectedMovie" layout="row" layout-wrap>
+		<div ng-repeat="movie in listOfMovies" class="movie-div">
+			<img ng-src="{{ movie.Poster }}" class="poster">
+			<md-radio-button value="{{ movie.Title }}" class="md-primary">{{ movie.Title + ' (' + movie.Year + ')' }}</md-radio-button>
+		</div>
+	</md-radio-group>
+</div>

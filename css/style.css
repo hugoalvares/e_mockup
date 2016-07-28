@@ -125,3 +125,20 @@
     padding-left: 5px;
     font-weight: normal;
 }
+
+.food-pic {
+	border-radius: 50%;
+    width: 100px;	
+}
+
+.food {
+	width: 25%;
+	margin-bottom: 30px;
+}
+
+@media (max-width:599px) {
+	.food {
+		width: 50%;
+		margin-bottom: 30px;
+	}
+}

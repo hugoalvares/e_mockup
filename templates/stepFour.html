@@ -1,3 +1,23 @@
-<div>
-	FOUR
+<div class="padding">
+	<span>We take too serious to choose our restaurant, everyday. What kind of food do you like?</span>
+	<br>
+	<br>
+	<md-radio-group ng-model="selectedFood" layout="row" layout-wrap>
+		<div class="food">
+			<img ng-src="images/insect.png" class="food-pic">
+			<md-radio-button value="insect" class="md-primary">I am an insect.</md-radio-button>
+		</div>
+		<div class="food">
+			<img ng-src="images/pasta.png" class="food-pic">
+			<md-radio-button value="pasta" class="md-primary">I love pasta.</md-radio-button>
+		</div>
+		<div class="food">
+			<img ng-src="images/meat.png" class="food-pic">
+			<md-radio-button value="meat" class="md-primary">Gimme meat.</md-radio-button>
+		</div>
+		<div class="food">
+			<img ng-src="images/food.png" class="food-pic">
+			<md-radio-button value="food" class="md-primary">Is it food? I am in.</md-radio-button>
+		</div>
+	</md-radio-group>
 </div>

@@ -78,6 +78,33 @@ app.controller('QuizController', ['$scope', '$http', function($scope, $http){
 		});
 	}
 
+	function validateSeason(selectedSeason) {
+		if ((selectedSeason == undefined) || (selectedSeason == '')) {
+			alert('Select your favorite season.');
+			return false;
+		} else {
+			return true;
+		}
+	}
+
+	// step four ----------------------------------------------------------
+
+	$scope.selectedFood = '';
+
+	function validateFood(selectedFood) {
+		if ((selectedFood == undefined) || (selectedFood == '')) {
+			alert('Select your favorite food.');
+			return false;
+		} else {
+			return true;
+		}
+	}	
+
+	// step five ----------------------------------------------------------
+
+	// force radio button selection in the step five
+	$scope.group1 = 'option1';
+
 	// general ----------------------------------------------------------
 
 	$scope.back = function() {
@@ -93,9 +120,11 @@ app.controller('QuizController', ['$scope', '$http', function($scope, $http){
 			valid = validateForm($scope);
 		} else if ($scope.currentStep == 2) {
 			valid = validateMovie($scope.selectedMovie);
+		} else if ($scope.currentStep == 3) {
+			valid = validateSeason($scope.selectedSeason);
+		} else if ($scope.currentStep == 4) {
+			valid = validateFood($scope.selectedFood);
 		}
-
-
 
 		if (($scope.currentStep != 5) && (valid)) {
 			$scope.currentStep++;

@@ -52,9 +52,9 @@
 		</div>
 		<div class="padding">
 			<md-button class="light-blue-color md-raised md-primary" ng-click="back()">BACK</md-button>
-			<md-button class="light-blue-color md-raised md-primary button-align-right" ng-click="next()">NEXT</md-button>
+			<md-button ng-show="currentStep != 5" class="light-blue-color md-raised md-primary button-align-right" ng-click="next()">NEXT</md-button>
+			<md-button ng-show="currentStep == 5" class="light-blue-color md-raised md-primary button-align-right" ng-click="restart()">SAVE</md-button>
 		</div>
 	</div>
-
 </body>
 </html>

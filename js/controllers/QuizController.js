@@ -131,4 +131,17 @@ app.controller('QuizController', ['$scope', '$http', function($scope, $http){
 		}
 	};
 
+	$scope.restart = function() {
+		$scope.superhero = '';
+		$scope.series = '';
+		$scope.biscuit = '';
+		$scope.quote = '';
+		$scope.selectedMovie = '';
+		$scope.selectedSeason = '';
+		$scope.episodes = '';
+		$scope.selectedFood = '';
+
+		$scope.currentStep = 1;
+	}
+
 }]);
